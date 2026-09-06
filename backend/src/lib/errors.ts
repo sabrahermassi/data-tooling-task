@@ -1,4 +1,7 @@
 export type ErrorCode =
+  | "INVALID_PAGE"
+  | "INVALID_PAGE_SIZE"
+  | "INVALID_SORT"
   | "TICKER_NOT_FOUND"
   | "UPSTREAM_ERROR"
   | "UPSTREAM_UNAVAILABLE"

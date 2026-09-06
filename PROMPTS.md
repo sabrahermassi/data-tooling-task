@@ -13,3 +13,13 @@ Is a 10-K/A considered an annual filing ? because my task requires me to return 
 # Prompt 4:
 
 I'm building against the SEC EDGAR submissions API. The task names Apple, Spotify and JPMorgan Chase as companies to test with, but says the code must work for any SEC filer. Are there differences between these three I should know about , anything that would break code written against just one of them?
+
+# Prompt 5:
+
+EDGAR returns filings as parallel arrays — form, filingDate, accessionNumber, primaryDocument — where index i in each array is the same filing. Turn that into an array of objects, one per filing, in TypeScript.
+
+Also build a documentUrl for each from the CIK and accession number: sec.gov/Archives/edgar/data/{cik-without-leading-zeros}/{accession-without-dashes}/{primaryDocument}.
+
+If the arrays aren't all the same length, throw rather than truncating — I'd rather fail loudly than silently return fewer filings than exist.
+
+# Prompt 6:

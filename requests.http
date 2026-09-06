@@ -16,3 +16,18 @@ GET {{host}}/companies/SPOT/filings
 
 ### 5. JPMorgan's filings
 GET {{host}}/companies/JPM/filings
+
+### 6. Filter to 10-K, 5 per page
+GET {{host}}/companies/AAPL/filings?formType=10-K&pageSize=5
+
+### 7. Oldest first
+GET {{host}}/companies/AAPL/filings?sort=asc&pageSize=3
+
+### 8. Page 2
+GET {{host}}/companies/AAPL/filings?page=2&pageSize=5
+
+### 9. Bad page → 400
+GET {{host}}/companies/AAPL/filings?page=0
+
+### 10. Bad sort → 400
+GET {{host}}/companies/AAPL/filings?sort=sideways
