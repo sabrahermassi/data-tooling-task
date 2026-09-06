@@ -18,9 +18,9 @@ function toCompany(row: TickerRow) {
   };
 }
 
-/** Loaded once at startup — the mapping changes rarely. */
+/** Loaded once at startup, the mapping changes rarely. */
 export async function loadTickers(): Promise<void> {
-  // The file is an object keyed "0", "1", "2" — not an array.
+  // The file is an object keyed "0", "1", "2", not an array.
   const rows = Object.values(
     (await getTickerFile()) as Record<string, TickerRow>,
   );
