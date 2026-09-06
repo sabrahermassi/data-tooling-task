@@ -14,6 +14,7 @@ Two terminals.
 
     cd frontend
     npm install
+    cp .env.example .env     # VITE_API_URL, default is fine
     npm run dev              # :5173
 
 Then open http://localhost:5173.
