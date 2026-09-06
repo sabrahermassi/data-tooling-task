@@ -1,0 +1,18 @@
+### SEC EDGAR Filing Explorer — request collection
+
+@host = http://localhost:3000
+
+### 1. Apple's filings
+GET {{host}}/companies/AAPL/filings
+
+### 2. Unknown ticker → 404 TICKER_NOT_FOUND
+GET {{host}}/companies/ZZZZ/filings
+
+### 3. Lowercase ticker still resolves
+GET {{host}}/companies/aapl/filings
+
+### 4. Spotify's filings
+GET {{host}}/companies/SPOT/filings
+
+### 5. JPMorgan's filings
+GET {{host}}/companies/JPM/filings
