@@ -30,9 +30,11 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [summary, setSummary] = useState<any>(null);
 
-  // Page 8 may not exist in the new result.
+  // Page 8 may not exist in the new result, and a stale error shouldn't
+  // survive a new selection.
   useEffect(() => {
     setPage(1);
+    setError(null);
   }, [ticker, formType, sort]);
 
   useEffect(() => {
